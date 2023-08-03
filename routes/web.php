@@ -17,18 +17,10 @@ Route::get('/', function () {
     return 'aaaaaaaaa';
 });
 
-Route::get('/my_page', function () {
-    return 'this is my page';
-});
+Route::get('/my_page', 'App\Http\Controllers\MyPageController@index');
 
-Route::get('/my_city', function () {
-    return 'my city is Dnipro';
-});
+Route::get('/my_city', 'App\Http\Controllers\MyCityController@city');
 
-Route::get('/my_hobby', function () {
-   return 'my hooby is gym';
-});
+Route::get('/my_hobby', 'App\Http\Controllers\MyHobbyController@hobby');
 
-Route::get('/my_pets', function () {
-    return 'my pet\'s is a Chapa';
-});
+Route::get('/my_pets', 'App\Http\Controllers\MyPetsController@pets');
