@@ -14,5 +14,21 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return 'aaaaaaaaa';
+});
+
+Route::get('/my_page', function () {
+    return 'this is my page';
+});
+
+Route::get('/my_city', function () {
+    return 'my city is Dnipro';
+});
+
+Route::get('/my_hobby', function () {
+   return 'my hooby is gym';
+});
+
+Route::get('/my_pets', function () {
+    return 'my pet\'s is a Chapa';
 });
