@@ -17,14 +17,7 @@ Route::get('/', function () {
     return 'aaaaaaaaa';
 });
 
-//Route::get('/my_page', 'App\Http\Controllers\MyPageController@index');
-//
-//Route::get('/my_city', 'App\Http\Controllers\MyCityController@city');
-//
-//Route::get('/my_hobby', 'App\Http\Controllers\MyHobbyController@hobby');
-//
-//Route::get('/my_pets', 'App\Http\Controllers\MyPetsController@pets');
-
 Route::get('/posts', 'App\Http\Controllers\PostController@index');
 Route::get('/hobby', 'App\Http\Controllers\HobbyController@index');
 Route::get('/pets', 'App\Http\Controllers\PetController@index');
+Route::get('/city', 'App\Http\Controllers\CityController@index');
