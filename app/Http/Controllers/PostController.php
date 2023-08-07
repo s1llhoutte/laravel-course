@@ -66,4 +66,16 @@ class PostController extends Controller
         ]);
         dd('updated');
     }
+
+    public function delete() {
+        // метод удаления
+//        $post = Post::find(2);
+//        $post->delete();
+//        dd('deleted');
+
+        // метод восстановления из мусорки
+        $post = Post::withTrashed()->find(2);
+        $post->restore();
+        dd('restored');
+    }
 }
