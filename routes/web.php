@@ -24,3 +24,4 @@ Route::get('/city', 'App\Http\Controllers\CityController@index');
 
 
 Route::get('/posts/create', 'App\Http\Controllers\PostController@create');
+Route::get('/posts/update', 'App\Http\Controllers\PostController@update');
