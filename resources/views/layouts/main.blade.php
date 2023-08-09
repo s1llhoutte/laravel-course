@@ -11,13 +11,20 @@
 <body>
     <div class="container">
         <div class='row'>
-            <nav>
-                <ul>
-                    <li><a href="{{ route('main.index') }}">Main</a></li>
-                    <li><a href="{{ route('post.index') }}">Posts</a></li>
-                    <li><a href="{{ route('about.index') }}">About</a></li>
-                    <li><a href="{{ route('contact.index') }}">Contacts</a></li>
-                </ul>
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" aria-current="page" href="{{ route('main.index') }}">Main</a>
+                            <a class="nav-link" href="{{ route('post.index') }}">Posts</a>
+                            <a class="nav-link" href="{{ route('about.index') }}">About</a>
+                            <a class="nav-link" href="{{ route('contact.index') }}">Contacts</a>
+                        </div>
+                    </div>
+                </div>
             </nav>
         </div>
         @yield('content')
