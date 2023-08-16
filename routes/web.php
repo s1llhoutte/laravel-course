@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\HomeController@index');
+Route::get('/', 'App\Http\Controllers\HomeController@index')->name('home');
 
 
 Route::group(['namespace' => 'App\Http\Controllers\Post'], function(){
@@ -27,9 +27,10 @@ Route::group(['namespace' => 'App\Http\Controllers\Post'], function(){
 });
 
 
-Route::prefix('admin')->namespace('App\Http\Controllers\Admin\post')->name('admin.')->group(function() {
+Route::prefix('admin')->namespace('App\Http\Controllers\Admin\post')->name('admin')->middleware('admin')->group(function() {
     Route::get('/post', 'IndexController')->name('post.index');
 });
+
 
 Route::get('/posts/update', 'App\Http\Controllers\PostController@update');
 Route::get('/posts/delete', 'App\Http\Controllers\PostController@delete');
